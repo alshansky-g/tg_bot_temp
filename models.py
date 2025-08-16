@@ -22,11 +22,6 @@ class User(Base):
     user_name: Mapped[str] = mapped_column(String(200), nullable=False)
     secret_number: Mapped[int] = mapped_column(default=0)
     attempts: Mapped[int] = mapped_column(default=5)
-    att_1: Mapped[int] = mapped_column(default=0)
-    att_2: Mapped[int] = mapped_column(default=0)
-    att_3: Mapped[int] = mapped_column(default=0)
-    att_4: Mapped[int] = mapped_column(default=0)
-    att_5: Mapped[int] = mapped_column(default=0)
 
 
 async def init_models():
