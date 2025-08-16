@@ -1,0 +1,5 @@
+.venv/
+
+bot_token.py
+__pycache__
+bot_base.db
