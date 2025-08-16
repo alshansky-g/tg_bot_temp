@@ -4,12 +4,12 @@ from aiogram.client.default import DefaultBotProperties
 import game_handlers
 import command_handlers
 from models import init_models
-from bot_token import BOT_TOKEN
+from config import settings
 
 
 async def main():
     await init_models()
-    bot = Bot(token=BOT_TOKEN,
+    bot = Bot(token=settings.BOT_TOKEN,
               default=DefaultBotProperties(parse_mode='HTML'))
     dp = Dispatcher()
 

@@ -8,9 +8,9 @@ async def insert_new_user_in_table(user_tg_id: int, name: str):
         query = await session.execute(
             select(User).filter(User.user_id == user_tg_id))
         print(f"{query=}")
-        needed_data = query.scalar()
-        print(f"{needed_data=}")
-        if not needed_data:
+        user = query.scalar()
+        print(f"{user=}")
+        if not user:
             secret_number = randint(6, 100)
             new_user = User(
                 user_id=user_tg_id, user_name=name, secret_number=secret_number
